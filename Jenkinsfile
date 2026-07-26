@@ -4,13 +4,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build Stage'
+                timeout(time: 5, unit: 'SECONDS') {
+                    echo 'Build Stage'
+                }
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Test Stagemmmms'
+                echo 'Test Stage'
             }
         }
     }
